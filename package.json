@@ -1,6 +1,6 @@
 {
   "name": "itree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "trees with immutable.js",
   "main": "build.js",
   "scripts": {
