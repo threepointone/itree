@@ -41,11 +41,11 @@ let tree = immutable.fromJS({
 });
 ```
 you can point to any node in the tree with a path like so -
-
+```js
 [0] -> <view><image...</view>
 [0, 0] -> <image.... </image>
 [0, 0, 1] -> <text className='description'...</text>
-
+```
 
 itree gives you the primitives to manipulate this structure, while leaving the original unchanged.
 
