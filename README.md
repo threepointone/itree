@@ -106,3 +106,4 @@ further work
 
 - more functions (up, down, diff, patch, etc)
 - demos
+- jsx helpers to generate trees
