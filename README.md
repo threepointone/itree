@@ -3,7 +3,7 @@ itree
 
 simple tree operations on immutable.js "trees"
 
-many interesting things can be modelled as trees. for example, consider the following layout for a movie banner(in jsx notation)
+many interesting things can be modelled as trees. for example, consider the following layout for a movie banner
 ```js
 <view>
   <image src='poster.jpg'>
@@ -40,17 +40,16 @@ let tree = immutable.fromJS({
   }]
 });
 ```
-you can point to any node in the tree with a path like so -
-```js
-[0] -> <view><image...</view>
-[0, 0] -> <image.... </image>
-[0, 0, 1] -> <text className='description'...</text>
-```
 
 itree gives you the primitives to manipulate this structure, while leaving the original unchanged.
 
 ```js
 import {walk, add, remove, move} from 'itree';
+
+// you can point to any node in the tree with a path like so -
+// [0] -> <view><image...</view>
+// [0, 0] -> <image.... </image>
+// [0, 0, 1] -> <text className='description'...</text>
 
 // get node at path
 walk(tree, [0, 0]) // <image.... </image>
@@ -78,3 +77,9 @@ move(tree, [0, 0, 0], [0, 0])
 // </view>
 
 ```
+
+tests
+---
+`npm test`
+
+further works
