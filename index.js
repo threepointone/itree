@@ -82,7 +82,7 @@ export function type(tree, path, $type){
 }
 
 export function props(tree, path, $props){
-  return tree.updateIn(path, node => node.set('props', $props));
+  return tree.updateIn(path, node => node.set('props', node.get('props').merge(immutable.fromJS($props))));
 }
 
 

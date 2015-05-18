@@ -1,6 +1,8 @@
 itree
 ---
 
+_(alpha)_
+
 simple tree operations on immutable.js "trees"
 
 many interesting things can be modelled as trees. for example, consider the following layout for a movie banner
@@ -44,7 +46,7 @@ let tree = immutable.fromJS({
 itree gives you the primitives to manipulate this structure, while leaving the original unchanged.
 
 ```js
-import {walk, add, remove, move} from 'itree';
+import {walk, add, remove, move, type, props} from 'itree';
 
 // you can point to any node in the tree with a path like so -
 // [0] -> <view><image...</view>
@@ -76,10 +78,31 @@ move(tree, [0, 0, 0], [0, 0])
 //  </image>
 // </view>
 
+// change the type of a node
+type(tree, [0], 'xyz')
+// <xyz>
+//  <image src='poster.jpg'>
+//    ...
+//  </image>
+// </xyz>
+
+// set the props of a node
+props(tree, [0, 0], {a: 1})
+// <view>
+//  <image src='poster.jpg', a={1}>
+//    ...
+//  </image>
+// </view>
+
+
 ```
 
 tests
 ---
 `npm test`
 
-further works
+further work
+---
+
+- more functions (up, down, diff, patch, etc)
+- demos

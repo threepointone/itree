@@ -59,4 +59,7 @@ describe('immutable tree', () => {
     walk(p2, [0, 1]).get('type').should.equal('e');
   });
 
+  it('can set the node type');
+  it('can set the node props');
+
 });
