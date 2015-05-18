@@ -1,0 +1,31 @@
+{
+  "name": "itree",
+  "version": "1.0.0",
+  "description": "trees with immutable.js",
+  "main": "build.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/threepointone/itree.git"
+  },
+  "keywords": [
+    "tree",
+    "immutable"
+  ],
+  "author": "Sunil Pai <threepointone@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/threepointone/itree/issues"
+  },
+  "homepage": "https://github.com/threepointone/itree#readme",
+  "dependencies": {
+    "immutable": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel": "^5.4.3",
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5"
+  }
+}
