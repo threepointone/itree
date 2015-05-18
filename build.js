@@ -104,7 +104,7 @@ function type(tree, path, $type) {
 
 function props(tree, path, $props) {
   return tree.updateIn(path, function (node) {
-    return node.set('props', $props);
+    return node.set('props', node.get('props').merge(_immutable2['default'].fromJS($props)));
   });
 }
 
